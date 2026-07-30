@@ -24,14 +24,14 @@ className="w-full h-full object-cover"
     >
       <motion.h1
         variants={motionVariants.fadeInUp}
-        className="font-heading text-5xl md:text-7xl font-semibold text-white mb-6"
+        className="font-heading text-5xl md:text-7xl font-semibold text-[var(--text-primary)] mb-6"
       >
         Parador Corazón de Jesús
       </motion.h1>
 
       <motion.p
         variants={motionVariants.fadeInUp}
-        className="text-xl md:text-2xl text-white/90 mb-8 font-body"
+        className="text-xl md:text-2xl text-[var(--text-secondary)] mb-8 font-body"
       >
         Comida criolla dominicana y barbacoa a la leña. Tradición familiar en el corazón del Cibao.
       </motion.p>
