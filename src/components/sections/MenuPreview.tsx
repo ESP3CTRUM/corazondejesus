@@ -1,27 +1,79 @@
-import { featuredMenu } from "@/data/menu";
+'use client';
 
-export function MenuPreview() {
-  return (
-    <section className="rounded-3xl border border-stone-200 bg-white p-8 shadow-sm">
-      <div className="mb-6 flex items-center justify-between">
-        <div>
-          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-amber-700">Menú</p>
-          <h2 className="text-2xl font-semibold text-stone-900">Platos destacados</h2>
-        </div>
-        <a href="/menu" className="text-sm font-medium text-stone-700 hover:text-stone-950">
-          Ver todo
-        </a>
-      </div>
-      <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-        {featuredMenu.map((item) => (
-          <article key={item.name} className="rounded-2xl bg-stone-50 p-5 ring-1 ring-stone-200">
-            <p className="text-sm font-semibold text-amber-700">{item.category}</p>
-            <h3 className="mt-2 text-lg font-semibold text-stone-900">{item.name}</h3>
-            <p className="mt-2 text-sm text-stone-600">{item.description}</p>
-            <p className="mt-4 text-base font-semibold text-stone-900">RD$ {item.price}</p>
-          </article>
-        ))}
-      </div>
-    </section>
-  );
-}
+import { motion } from 'motion/react';
+import { motionVariants } from '@/lib/motion';
+import { menu } from '@/data/menu';
+import Link from 'next/link';
+export default function MenuPreview() {
+const platosDestacados = menu.flatMap(categoria =>
+categoria.items.filter(item => item.destacado)
+).slice(0, 3);
+return (
+<section className="py-16 bg-surface">
+<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<motion.div
+initial="hidden"
+whileInView="visible"
+viewport={{ once: true, margin: "-100px" }}
+variants={motionVariants.staggerContainer}
+className="text-center mb-12"
+>
+<motion.h2
+variants={motionVariants.fadeInUp}
+className="font-heading text-4xl md:text-5xl font-semibold text-ink mb-4"
+>
+Nuestras Especialidades
+</motion.h2>
+<motion.p
+variants={motionVariants.fadeInUp}
+className="text-ink-secondary text-lg max-w-2xl mx-auto"
+>
+Preparadas a la leña con las recetas tradicionales de la casa
+</motion.p>
+</motion.div>
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, margin: "-50px" }}
+      variants={motionVariants.staggerContainer}
+      className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12"
+    >
+      {platosDestacados.map((plato, index) => (
+        <motion.div
+          key={index}
+          variants={motionVariants.staggerItem}
+          className="bg-white rounded-lg p-6 shadow-warm border border-wood/10"
+        >
+          <div className="flex items-start justify-between mb-3">
+            <h3 className="font-heading text-xl font-semibold text-ink">
+              {plato.nombre}
+            </h3>
+            <span className="bg-wood/10 text-wood text-xs font-semibold px-2 py-1 rounded">
+              {plato.categoria}
+            </span>
+          </div>
+          {plato.descripcion && (
+            <p className="text-ink-secondary text-sm">
+              {plato.descripcion}
+            </p>
+          )}
+        </motion.div>
+      ))}
+    </motion.div>
+
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      variants={motionVariants.fadeInUp}
+      className="text-center"
+    >
+      <Link
+        href="/menu"
+        className="inline-block bg-accent hover:bg-accent-hover text-white font-semibold px-8 py-4 rounded-md transition-colors duration-300 shadow-warm"
+      >
+        Ver menú completo
+      </Link>
+    </motion.div>
+  </div>
+</section>);}

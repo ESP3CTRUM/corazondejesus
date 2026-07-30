@@ -1,19 +1,58 @@
-export function Hero() {
-  return (
-    <section className="grid gap-6 rounded-3xl bg-white p-8 shadow-sm ring-1 ring-stone-200 lg:grid-cols-[1.2fr_0.8fr] lg:p-10">
-      <div className="space-y-4">
-        <p className="text-sm font-semibold uppercase tracking-[0.3em] text-amber-700">Bienvenido</p>
-        <h1 className="text-4xl font-semibold leading-tight text-stone-900 sm:text-5xl">
-          Deliciosa comida y un ambiente que te invita a volver.
-        </h1>
-        <p className="max-w-xl text-lg text-stone-600">
-          Explora nuestro menú, conoce nuestra historia y descubre la sucursal más cercana.
-        </p>
-      </div>
-      <div className="rounded-2xl bg-stone-100 p-6">
-        <p className="text-sm font-medium text-stone-700">Próximamente</p>
-        <p className="mt-2 text-2xl font-semibold text-stone-900">Galería de platos y ubicaciones</p>
-      </div>
-    </section>
-  );
-}
+'use client';
+
+import { motion } from 'motion/react';
+import { motionVariants } from '@/lib/motion';
+import Link from 'next/link';
+export default function Hero() {
+return (
+<section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
+{/* Background Image */}
+<div className="absolute inset-0 z-0">
+<img
+src="/images/jarabacoa/vista-montaña-balcón-restaurant.webp"
+alt="Vista del restaurante"
+className="w-full h-full object-cover"
+/>
+<div className="absolute inset-0 bg-dark/60" />
+</div>
+  {/* Content */}
+  <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <motion.div
+      initial="hidden"
+      animate="visible"
+      variants={motionVariants.staggerContainer}
+    >
+      <motion.h1
+        variants={motionVariants.fadeInUp}
+        className="font-heading text-5xl md:text-7xl font-semibold text-white mb-6"
+      >
+        Parador Corazón de Jesús
+      </motion.h1>
+
+      <motion.p
+        variants={motionVariants.fadeInUp}
+        className="text-xl md:text-2xl text-white/90 mb-8 font-body"
+      >
+        Comida criolla dominicana y barbacoa a la leña. Tradición familiar en el corazón del Cibao.
+      </motion.p>
+
+      <motion.div
+        variants={motionVariants.fadeInUp}
+        className="flex flex-col sm:flex-row gap-4 justify-center"
+      >
+        <Link
+          href="/menu"
+          className="bg-accent hover:bg-accent-hover text-white font-semibold px-8 py-4 rounded-md transition-colors duration-300 shadow-warm-lg"
+        >
+          Ver Menú
+        </Link>
+        <Link
+          href="/nosotros"
+          className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-ink font-semibold px-8 py-4 rounded-md transition-all duration-300"
+        >
+          Nuestra Historia
+        </Link>
+      </motion.div>
+    </motion.div>
+  </div>
+</section>);}

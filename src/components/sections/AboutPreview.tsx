@@ -1,17 +1,53 @@
-export function AboutPreview() {
-  return (
-    <section className="grid gap-6 rounded-3xl bg-stone-900 p-8 text-stone-100 shadow-sm lg:grid-cols-[1fr_0.8fr] lg:p-10">
-      <div>
-        <p className="text-sm font-semibold uppercase tracking-[0.3em] text-amber-400">Nosotros</p>
-        <h2 className="mt-3 text-2xl font-semibold">Una tradición hecha para compartir</h2>
-        <p className="mt-4 max-w-xl text-base text-stone-300">
-          Cada plato nace con el deseo de ofrecer un espacio cercano, con sabor auténtico y atención cuidada.
+'use client';
+
+import { motion } from 'motion/react';
+import { motionVariants } from '@/lib/motion';
+import Link from 'next/link';
+export default function AboutPreview() {
+return (
+<section className="py-16 bg-base">
+<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+{/* Image */}
+<motion.div
+initial="hidden"
+whileInView="visible"
+viewport={{ once: true, margin: "-100px" }}
+variants={motionVariants.fadeInLeft}
+className="photo-frame"
+>
+<img
+src="/images/jarabacoa/Chef-en-parrillada.webp"
+alt="Chef preparando carne a la leña"
+className="w-full h-auto rounded-md"
+/>
+</motion.div>
+      {/* Content */}
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-100px" }}
+        variants={motionVariants.fadeInRight}
+      >
+        <h2 className="font-heading text-4xl md:text-5xl font-semibold text-ink mb-6">
+          Tradición familiar desde el corazón del Cibao
+        </h2>
+        <p className="text-ink-secondary text-lg mb-6 leading-relaxed">
+          Somos un restaurante familiar icónico en la región del Cibao, famoso por nuestras costillas preparadas a la leña. 
+          Cada plato es cocinado con el método tradicional que nos ha distinguido por años, usando leña natural para lograr 
+          ese sabor ahumado único que nuestros clientes aman.
         </p>
-      </div>
-      <div className="rounded-2xl border border-stone-700 bg-stone-800 p-6">
-        <p className="text-sm text-stone-300">Próximamente</p>
-        <p className="mt-2 text-xl font-semibold">Historia, valores y detalles del restaurante</p>
-      </div>
-    </section>
-  );
-}
+        <p className="text-ink-secondary text-lg mb-8 leading-relaxed">
+          Con dos sucursales estratégicas en Jarabacoa y Bonao, somos la parada perfecta para quienes buscan 
+          buena comida criolla dominicana en un ambiente campestre y acogedor.
+        </p>
+        <Link
+          href="/nosotros"
+          className="inline-block border-2 border-wood text-ink hover:bg-wood hover:text-white font-semibold px-8 py-3 rounded-md transition-all duration-300"
+        >
+          Conoce nuestra historia
+        </Link>
+      </motion.div>
+    </div>
+  </div>
+</section>);}

@@ -1,24 +1,34 @@
 import type { Metadata } from "next";
-import type { ReactNode } from "react";
+import { Fraunces, Work_Sans } from "next/font/google";
 import "./globals.css";
-import { Header } from "@/components/layout/Header";
-import { Footer } from "@/components/layout/Footer";
 
+const fraunces = Fraunces({
+subsets: ["latin"],
+weight: ["600"],
+variable: "--font-heading",
+display: "swap",
+});
+const workSans = Work_Sans({
+subsets: ["latin"],
+weight: ["400", "500", "600"],
+variable: "--font-body",
+display: "swap",
+});
 export const metadata: Metadata = {
-  title: "Corazón de Jesús",
-  description: "Restaurante y lugar para disfrutar de comida de calidad.",
+title: "Parador Corazón de Jesús - Comida Criolla y Barbacoa a la Leña",
+description: "Restaurante familiar icónico en la región del Cibao, famoso por sus costillas preparadas a la leña. Dos sucursales: Jarabacoa y Bonao.",
+keywords: "restaurante, comida criolla, barbacoa, leña, Jarabacoa, Bonao, República Dominicana",
 };
-
-export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
-  return (
-    <html lang="es" className="h-full antialiased">
-      <body className="min-h-full bg-stone-50 text-stone-900">
-        <div className="flex min-h-screen flex-col">
-          <Header />
-          <main className="flex-1">{children}</main>
-          <Footer />
-        </div>
-      </body>
-    </html>
-  );
+export default function RootLayout({
+children,
+}: Readonly<{
+children: React.ReactNode;
+}>) {
+return (
+<html lang="es">
+<body className={`${fraunces.variable} ${workSans.variable} font-body`}>
+{children}
+</body>
+</html>
+);
 }
