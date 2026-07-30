@@ -2,7 +2,7 @@
 
 import { motion } from 'motion/react';
 import { motionVariants } from '@/lib/motion';
-import type { Sucursal as SucursalType } from '@/data/sucursales';
+import type { sucursal as SucursalType } from '@/data/sucursales';
 
 interface LocationCardProps {
   sucursal: SucursalType;
@@ -15,15 +15,14 @@ initial="hidden"
 whileInView="visible"
 viewport={{ once: true, margin: "-50px" }}
 variants={motionVariants.fadeInUp}
-className="bg-surface rounded-lg border border-wood/15 p-6 shadow-warm"
->
+className="bg-surface rounded-lg border border-wood/15 p-6 shadow-warm">
 <div className="flex items-start justify-between mb-4">
-<h3 className="font-heading text-2xl font-semibold text-ink">
-{sucursal.nombre}
-</h3>
-<span className="bg-sage text-white text-xs font-semibold px-3 py-1 rounded-full">
-{sucursal.id === 'jarabacoa' ? 'Vista panorámica' : 'Sobre autopista'}
-</span>
+  <h3 className="font-heading text-2xl font-semibold text-ink">
+  {sucursal.nombre}
+  </h3>
+    <span className="bg-sage text-on-dark text-xs font-semibold px-3 py-1 rounded-full">
+      {sucursal.id === 'jarabacoa' ? 'Vista panorámica' : 'Sobre autopista'}
+    </span>
 </div>  <div className="space-y-3 mb-6">
     <div>
       <p className="text-ink-secondary text-sm font-medium mb-1">Dirección</p>

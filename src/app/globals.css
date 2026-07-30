@@ -2,10 +2,10 @@
 
 :root {
 /* Colores del sistema de diseño */
---bg-base: #FBF3E7;
+--bg-base: #141414;
 --bg-surface: #F3E6D2;
 --bg-dark: #241A14;
---text-primary: #2B211C;
+--text-primary: #E22628;
 --text-secondary: #6B5A4C;
 --text-on-dark: #F3E6D2;
 --accent: #E22628;
@@ -25,7 +25,7 @@
 --shadow-warm: 0 4px 12px rgba(43, 33, 28, 0.12);
 --shadow-warm-lg: 0 8px 24px rgba(43, 33, 28, 0.15);
 }
-{
+-- {
 box-sizing: border-box;
 margin: 0;
 padding: 0;
