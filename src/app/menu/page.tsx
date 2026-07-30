@@ -16,10 +16,10 @@ animate={{ opacity: 1, y: 0 }}
 transition={{ duration: 0.6 }}
 className="text-center mb-12"
 >
-<h1 className="font-heading text-5xl md:text-6xl font-semibold text-[var(--text-primary)] mb-4">
+<h1 className="font-heading text-5xl md:text-6xl font-semibold text-ink mb-4">
 Nuestro Menú
 </h1>
-<p className="text-[var(--text-secondary)] text-lg max-w-2xl mx-auto">
+<p className="text-ink-secondary text-lg max-w-2xl mx-auto">
 Especialidades preparadas a la leña con las recetas tradicionales de la casa
 </p>
 </motion.div>
@@ -79,10 +79,10 @@ Especialidades preparadas a la leña con las recetas tradicionales de la casa
         transition={{ duration: 0.6, delay: 0.3 }}
         className="mt-16 bg-surface rounded-lg p-8 text-center border border-wood/15"
       >
-        <h3 className="font-heading text-2xl font-semibold text-[var(--text-primary)] mb-3">
+        <h3 className="font-heading text-2xl font-semibold text-ink mb-3">
           Nuestras recetas son tradición
         </h3>
-        <p className="text-[var(--text-secondary)]">
+        <p className="text-ink-secondary">
           Las recetas de la casa no se modifican. Cada plato se prepara con el método tradicional 
           que nos ha distinguido por años, manteniendo la autenticidad del sabor criollo dominicano.
         </p>

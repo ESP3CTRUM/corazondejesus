@@ -25,7 +25,7 @@
 --shadow-warm: 0 4px 12px rgba(43, 33, 28, 0.12);
 --shadow-warm-lg: 0 8px 24px rgba(43, 33, 28, 0.15);
 }
-* {
+-- {
 box-sizing: border-box;
 margin: 0;
 padding: 0;
@@ -35,6 +35,7 @@ scroll-behavior: smooth;
 }
 body {
 background-color: var(--bg-base);
+color: var(--text-primary);
 font-family: var(--font-body);
 line-height: 1.6;
 -webkit-font-smoothing: antialiased;
@@ -44,10 +45,6 @@ h1, h2, h3, h4, h5, h6 {
 font-family: var(--font-heading);
 font-weight: 600;
 line-height: 1.2;
-color: var(--text-primary);
-}
-p {
-color: var(--text-secondary);
 }
 /* Utilidades para bordes con tono madera */
 .border-wood {
