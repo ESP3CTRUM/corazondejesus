@@ -26,10 +26,10 @@ animate={{ opacity: 1, y: 0 }}
 transition={{ duration: 0.8 }}
 className="relative z-10 text-center px-4"
 >
-<h1 className="font-heading text-5xl md:text-7xl font-semibold text-white mb-4">
+<h1 className="font-heading text-5xl md:text-7xl font-semibold text-[var(--text-primary)] mb-4">
 Sucursal {sucursal.nombre}
 </h1>
-<p className="text-xl text-white/90 max-w-2xl mx-auto">
+<p className="text-xl text-[var(--text-secondary)] max-w-2xl mx-auto">
 {sucursal.caracteristicas[0]}
 </p>
 </motion.div>
