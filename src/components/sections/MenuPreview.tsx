@@ -20,13 +20,12 @@ className="text-center mb-12"
 >
 <motion.h2
 variants={motionVariants.fadeInUp}
-className="font-heading text-4xl md:text-5xl font-semibold text-ink mb-4"
->
+className="font-heading text-4xl md:text-5xl font-semibold text-(--text-primary)">
 Nuestras Especialidades
 </motion.h2>
 <motion.p
 variants={motionVariants.fadeInUp}
-className="text-ink-secondary text-lg max-w-2xl mx-auto"
+className="text-(--text-on-dark) text-lg max-w-2xl mx-auto"
 >
 Preparadas a la leña con las recetas tradicionales de la casa
 </motion.p>

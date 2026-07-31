@@ -24,16 +24,16 @@ className="w-full h-full object-cover"
     >
       <motion.h1
         variants={motionVariants.fadeInUp}
-        className="font-heading text-5xl md:text-7xl font-semibold text-white mb-6"
+        className="font-heading text-5xl md:text-7xl font-semibold text-(--text-on-dark)"
       >
         Parador Corazón de Jesús
       </motion.h1>
 
       <motion.p
         variants={motionVariants.fadeInUp}
-        className="text-xl md:text-2xl text-white/90 mb-8 font-body"
+        className="text-xl md:text-2xl text-(--text-on-dark)/90 mb-8 font-body"
       >
-        Comida criolla dominicana y barbacoa a la leña. Tradición familiar en el corazón del Cibao.
+        Comida criolla y Carnes a la leña. Tradición familiar en el corazón del Cibao.
       </motion.p>
 
       <motion.div
@@ -42,15 +42,9 @@ className="w-full h-full object-cover"
       >
         <Link
           href="/menu"
-          className="bg-accent hover:bg-accent-hover text-white font-semibold px-8 py-4 rounded-md transition-colors duration-300 shadow-warm-lg"
+          className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-(--text-on-white) font-semibold px-8 py-4 rounded-md transition-all duration-300"
         >
           Ver Menú
-        </Link>
-        <Link
-          href="/nosotros"
-          className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-ink font-semibold px-8 py-4 rounded-md transition-all duration-300"
-        >
-          Nuestra Historia
         </Link>
       </motion.div>
     </motion.div>

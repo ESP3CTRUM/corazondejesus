@@ -19,7 +19,7 @@ className="text-center mb-12"
 <h1 className="font-heading text-5xl md:text-6xl font-semibold text-ink mb-4">
 Nuestro Menú
 </h1>
-<p className="text-ink-secondary text-lg max-w-2xl mx-auto">
+  <p className="text-ink-secondary text-lg max-w-2xl mx-auto">
 Especialidades preparadas a la leña con las recetas tradicionales de la casa
 </p>
 </motion.div>
@@ -83,7 +83,7 @@ Especialidades preparadas a la leña con las recetas tradicionales de la casa
           Nuestras recetas son tradición
         </h3>
         <p className="text-ink-secondary">
-          Las recetas de la casa no se modifican. Cada plato se prepara con el método tradicional 
+ecetas de la casa no se modifican. Cada plato se prepara con el método tradicional 
           que nos ha distinguido por años, manteniendo la autenticidad del sabor criollo dominicano.
         </p>
       </motion.div>

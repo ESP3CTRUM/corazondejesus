@@ -28,16 +28,15 @@ className="w-full h-auto rounded-md"
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
         variants={motionVariants.fadeInRight}
+        className="space-y-12.5"
       >
-        <h2 className="font-heading text-4xl md:text-5xl font-semibold text-ink mb-6">
+        <h2 className="font-heading text-4xl md:text-5xl font-semibold text-(--text-primary)">
           Tradición familiar desde el corazón del Cibao
         </h2>
-        <p className="text-ink-secondary text-lg mb-6 leading-relaxed">
+        <p className="text-ink-secondary text-lg leading-relaxed">
           Somos un restaurante familiar icónico en la región del Cibao, famoso por nuestras costillas preparadas a la leña. 
           Cada plato es cocinado con el método tradicional que nos ha distinguido por años, usando leña natural para lograr 
-          ese sabor ahumado único que nuestros clientes aman.
-        </p>
-        <p className="text-ink-secondary text-lg mb-8 leading-relaxed">
+          ese sabor ahumado único que nuestros clientes aman. <br></br><br></br>
           Con dos sucursales estratégicas en Jarabacoa y Bonao, somos la parada perfecta para quienes buscan 
           buena comida criolla dominicana en un ambiente campestre y acogedor.
         </p>

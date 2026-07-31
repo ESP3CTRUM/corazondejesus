@@ -14,8 +14,8 @@ export const menu: MenuCategoria[] = [
 nombre: "Especialidades de Carne (A la leña / Parrilla)",
 items: [
 {
-nombre: "Costillas y costillitas de cerdo a la leña",
-descripcion: "Venta principal por libra. Preparadas con el método tradicional de la casa.",
+nombre: "costillitas de cerdo a la leña",
+descripcion: "Preparadas con el método tradicional de la casa. Cómpralas por libra.",
 categoria: "A la leña",
 destacado: true
 },
@@ -26,7 +26,7 @@ categoria: "A la leña"
 },
 {
 nombre: "Pollo a la leña",
-descripcion: "Pollo entero o por piezas, cocinado lentamente sobre brasas.",
+descripcion: "Pollo entero o por piezas, cocinado a la leña",
 categoria: "A la leña"
 }
 ]

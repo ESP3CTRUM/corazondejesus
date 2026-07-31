@@ -8,6 +8,7 @@
 --text-primary: #E22628;
 --text-secondary: #6B5A4C;
 --text-on-dark: #F3E6D2;
+--text-on-white: #181818;
 --accent: #E22628;
 --accent-hover: #B71E20;
 --wood: #7A4B32;
@@ -35,7 +36,7 @@ scroll-behavior: smooth;
 }
 body {
 background-color: var(--bg-base);
-color: var(--text-primary);
+color: var(--text-on-dark);
 font-family: var(--font-body);
 line-height: 1.6;
 -webkit-font-smoothing: antialiased;

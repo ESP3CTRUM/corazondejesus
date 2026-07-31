@@ -18,7 +18,7 @@ return (
     <section className="py-16 bg-surface">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="font-heading text-4xl md:text-5xl font-semibold text-ink mb-4">
+          <h2 className="font-heading text-4xl md:text-5xl font-semibold text-(--text-primary)">
             Nuestras Sucursales
           </h2>
           <p className="text-ink-secondary text-lg">
