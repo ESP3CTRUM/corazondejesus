@@ -1,4 +1,3 @@
-"use client";
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import { motion } from 'motion/react';
@@ -68,7 +67,7 @@ Tradición, sabor y familia en el corazón del Cibao
             la misma esencia:
           </p>
 
-          <div className="spotlight-card bg-surface p-6 mb-6">
+          <div className="bg-surface rounded-lg p-6 mb-6 border border-wood/15">
             <h4 className="font-heading text-2xl font-semibold text-ink mb-3">
               Jarabacoa - Vista panorámica
             </h4>
@@ -79,7 +78,7 @@ Tradición, sabor y familia en el corazón del Cibao
             </p>
           </div>
 
-          <div className="spotlight-card bg-surface p-6 mb-6">
+          <div className="bg-surface rounded-lg p-6 mb-6 border border-wood/15">
             <h4 className="font-heading text-2xl font-semibold text-ink mb-3">
               Bonao - Parada estratégica
             </h4>
@@ -116,9 +115,8 @@ Tradición, sabor y familia en el corazón del Cibao
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="font-heading text-4xl font-semibold text-ink text-center mb-12"
-        >
-          Nuestro ambiente
+          className="font-heading text-4xl font-semibold text-ink text-center mb-12">
+      Nuestro ambiente
         </motion.h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

@@ -7,7 +7,7 @@ import type { ReactNode } from 'react';
 
 function InfoCard({ title, children }: { title: string; children: ReactNode }) {
   return (
-    <div className="spotlight-card p-6">
+    <div className="rounded-2xl border border-wood/15 bg-white p-6 shadow-warm">
       <h3 className="text-(--text-on-white) text-sm font-semibold mb-3 uppercase tracking-wide">
         {title}
       </h3>
@@ -130,7 +130,7 @@ className="relative z-10 text-center px-4"
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="spotlight-card p-4"
+            className="rounded-2xl border border-wood/15 bg-white p-4 shadow-warm"
           >
             <div className="mb-4">
               <h3 className="text-(--text-on-white) text-sm font-semibold uppercase tracking-wide">
