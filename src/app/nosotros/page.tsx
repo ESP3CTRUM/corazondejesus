@@ -71,7 +71,7 @@ Tradición, sabor y familia en el corazón del Cibao
             El alto rústico en carretera
           </h2>
           
-          <p className="text-ink-secondary text-lg leading-relaxed mb-6">
+          <p className="text-ink-secondary text-lg leading-relaxed mb-6 border-2 border-(--accent) p-4 ">
             El Parador Corazón de Jesús nació como un lugar donde las familias pueden detenerse en su camino 
             por la carretera y disfrutar de una comida auténtica, preparada con el método tradicional de la leña. 
             No somos un restaurante de ciudad ni una cadena corporativa: somos un parador campestre donde el fuego, 
@@ -93,7 +93,7 @@ Tradición, sabor y familia en el corazón del Cibao
             la misma esencia:
           </p>
 
-          <div className="bg-surface rounded-lg p-6 mb-6 border border-wood/15">
+          <div className="bg-surface p-6 mb-6 border border-(--accent)">
             <h4 className="font-heading text-2xl font-semibold text-ink mb-3">
               Jarabacoa - Vista panorámica
             </h4>
@@ -104,7 +104,7 @@ Tradición, sabor y familia en el corazón del Cibao
             </p>
           </div>
 
-          <div className="bg-surface rounded-lg p-6 mb-6 border border-wood/15">
+          <div className="bg-surface p-6 mb-6 border border-(--accent)">
             <h4 className="font-heading text-2xl font-semibold text-ink mb-3">
               Bonao - Parada estratégica
             </h4>
