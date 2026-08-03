@@ -89,7 +89,7 @@ className="sticky top-0 z-50 bg-base/95 backdrop-blur-sm border-b border-wood"
       {/* Mobile menu button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="md:hidden text-(--text-on-white) p-2"
+        className="md:hidden text-(--text-on-black) p-2"
         aria-label="Menú"
       >
         <svg
