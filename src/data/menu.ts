@@ -14,9 +14,9 @@ export const menu: MenuCategoria[] = [
 nombre: "Especialidades de Carne (A la leña / Parrilla)",
 items: [
 {
-nombre: "costillitas de cerdo a la leña",
-descripcion: "Preparadas con el método tradicional de la casa. Cómpralas por libra.",
-categoria: "A la leña",
+nombre: "costillas de cerdo",
+descripcion: "Cómpralas por libra.",
+categoria: "Carnes",
 destacado: true
 },
 {
@@ -36,7 +36,7 @@ nombre: "Acompañamientos Tradicionales",
 items: [
 {
 nombre: "Yuca frita",
-descripcion: "Plato acompañante altamente recomendado. Crujiente por fuera, suave por dentro.",
+descripcion: "Crujiente por fuera, suave por dentro.",
 categoria: "Acompañamiento",
 destacado: true
 },
@@ -57,7 +57,7 @@ nombre: "Bebidas",
 items: [
 {
 nombre: "Fresa frozen con alcohol",
-descripcion: "Especialidad de la casa. Coctel refrescante preparado con fresas frescas.",
+descripcion: "Coctel preparado con fresas frescas.",
 categoria: "Cocteles",
 destacado: true
 },

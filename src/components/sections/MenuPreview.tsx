@@ -1,5 +1,4 @@
 'use client';
-
 import { motion } from 'motion/react';
 import { motionVariants } from '@/lib/motion';
 import { menu } from '@/data/menu';
@@ -14,7 +13,7 @@ return (
 <motion.div
 initial="hidden"
 whileInView="visible"
-viewport={{ once: true, margin: "-100px" }}
+viewport={{ once: true, margin: "-60px" }}
 variants={motionVariants.staggerContainer}
 className="text-center mb-12"
 >
@@ -44,15 +43,15 @@ Preparadas a la leña con las recetas tradicionales de la casa
           className="bg-white rounded-lg p-6 shadow-warm border border-wood/10"
         >
           <div className="flex items-start justify-between mb-3">
-            <h3 className="font-heading text-xl font-semibold text-ink">
+            <h3 className="font-heading text-xl font-semibold text-(--text-on-white)">
               {plato.nombre}
             </h3>
-            <span className="bg-wood/10 text-wood text-xs font-semibold px-2 py-1 rounded">
+            <span className="bg-wood/10 text-(--text-on-white) text-xs font-semibold px-2 py-1 rounded">
               {plato.categoria}
             </span>
           </div>
           {plato.descripcion && (
-            <p className="text-ink-secondary text-sm">
+            <p className="text-(--text-on-white) text-sm">
               {plato.descripcion}
             </p>
           )}

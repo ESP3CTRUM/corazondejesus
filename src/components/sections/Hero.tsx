@@ -6,14 +6,19 @@ import Link from 'next/link';
 export default function Hero() {
 return (
 <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
-{/* Background Image */}
-<div className="absolute inset-0 z-0">
-<img
-src="/images/jarabacoa/vista-montaña-balcón-restaurant.webp"
-alt="Vista del restaurante"
-className="w-full h-full object-cover"
-/>
-<div className="absolute inset-0 bg-dark/60" />
+<div className='absolute inset-0 z-0'>
+  {/* Background Image */}
+  <div className="absolute inset-0 z-0">
+    <img
+    src="/images/jarabacoa/vista-montana-balcon-restaurant.webp"
+    alt="Vista del restaurante"
+    className="w-full h-full object-cover"
+    />
+  </div>
+  {/*overlay*/}
+  <div className='absolute inset-0 z-10 bg-black opacity-40'>
+    
+  </div>
 </div>
   {/* Content */}
   <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

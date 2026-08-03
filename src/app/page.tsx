@@ -22,11 +22,11 @@ return (
             Nuestras Sucursales
           </h2>
           <p className="text-ink-secondary text-lg">
-            Dos ubicaciones estratégicas para tu conveniencia
+            Nuestras ubicaciones están estratégicamente situadas para ofrecerte la mejor experiencia culinaria. <br /> Ven y disfruta de nuestros platos en cualquiera de nuestras sucursales.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-6 rounded-lg">
           {sucursales.map((sucursal) => (
             <LocationCard key={sucursal.id} sucursal={sucursal} />
           ))}

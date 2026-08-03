@@ -1,8 +1,34 @@
+"use client"; 
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
+import { useEffect, useState } from 'react';
 import { motion } from 'motion/react';
 
 export default function NosotrosPage() {
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (!selectedImage) {
+      document.body.style.overflow = '';
+      return;
+    }
+
+    document.body.style.overflow = 'hidden';
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setSelectedImage(null);
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+      document.body.style.overflow = '';
+    };
+  }, [selectedImage]);
+
 return (
 <>
 <Header />
@@ -119,30 +145,62 @@ Tradición, sabor y familia en el corazón del Cibao
       Nuestro ambiente
         </motion.h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="columns-1 md:columns-2 lg:columns-3 gap-6">
           {[
-            "/images/jarabacoa/vista-balcón-2.webp",
-            "/images/jarabacoa/restaurante-lleno-3.webp",
-            "/images/Bonao/foto-mesas-vacías.webp"
+            "/images/jarabacoa/vista-balcon-2.webp",
+            "/images/jarabacoa/meseros-distancia+wideshot-restaurante.webp",
+            "/images/jarabacoa/Restaurante-lleno.webp",
+            "/images/jarabacoa/mesera-espaldas-bandeja-mano.webp",
+            "/images/jarabacoa/foto-exterior-restaurante.webp",
+            "/images/jarabacoa/foto-aerea-restaurante+parqueo.webp"
           ].map((src, index) => (
-            <motion.div
-              key={index}
+            <motion.button
+              key={src}
+              type="button"
+              onClick={() => setSelectedImage(src)}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="photo-frame"
+              transition={{ duration: 0.6, delay: index * 0.08 }}
+              className="photo-frame mb-6 block w-full cursor-pointer overflow-hidden break-inside-avoid"
             >
               <img
                 src={src}
                 alt={`Ambiente del restaurante ${index + 1}`}
-                className="w-full h-64 object-cover rounded-md"
+                className="w-full h-auto rounded-md object-contain"
+                loading="lazy"
               />
-            </motion.div>
+            </motion.button>
           ))}
         </div>
       </div>
     </section>
+
+    {selectedImage && (
+      <div
+        className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 p-4"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Vista ampliada de la imagen"
+        onClick={() => setSelectedImage(null)}
+      >
+        <div className="relative max-h-[90vh] max-w-[90vw]" onClick={(event) => event.stopPropagation()}>
+          <button
+            type="button"
+            onClick={() => setSelectedImage(null)}
+            className="absolute right-3 top-3 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-black/70 text-xl text-white transition hover:bg-black/90"
+            aria-label="Cerrar imagen"
+          >
+            X
+          </button>
+          <img
+            src={selectedImage}
+            alt="Vista ampliada del restaurante"
+            className="max-h-[90vh] max-w-[90vw] rounded-lg object-contain shadow-2xl"
+          />
+        </div>
+      </div>
+    )}
   </main>
   <Footer />
 </>

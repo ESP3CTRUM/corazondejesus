@@ -1,5 +1,4 @@
 'use client';
-
 import { motion } from 'motion/react';
 import { motionVariants } from '@/lib/motion';
 import type { Sucursales as SucursalType } from '@/data/sucursales';
@@ -24,12 +23,8 @@ className="bg-surface rounded-lg border border-wood/15 p-6 shadow-warm"
 <span className="bg-sage text-white text-xs font-semibold px-3 py-1 rounded-full">
 {sucursal.id === 'jarabacoa' ? 'Vista panorámica' : 'Sobre autopista'}
 </span>
-</div>  <div className="space-y-3 mb-6">
-    <div>
-      <p className="text-ink-secondary text-sm font-medium mb-1">Dirección</p>
-      <p className="text-ink">{sucursal.direccion}</p>
-    </div>
-
+</div>  
+  <div className="space-y-3 mb-6">
     <div>
       <p className="text-ink-secondary text-sm font-medium mb-1">Teléfono</p>
       <a

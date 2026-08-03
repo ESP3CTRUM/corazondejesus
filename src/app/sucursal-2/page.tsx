@@ -3,7 +3,7 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import { sucursales } from '@/data/sucursales';
 import { motion } from 'motion/react';
-import type { ReactNode } from 'react';
+import { useEffect, useState, type ReactNode } from 'react';
 
 function InfoCard({ title, children }: { title: string; children: ReactNode }) {
   return (
@@ -17,20 +17,46 @@ function InfoCard({ title, children }: { title: string; children: ReactNode }) {
 }
 
 export default function Sucursal2Page() {
-const sucursal = sucursales.find((s: { id: string }) => s.id === 'bonao')!;
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const sucursal = sucursales.find((s: { id: string }) => s.id === 'bonao')!;
+
+  useEffect(() => {
+    if (!selectedImage) {
+      document.body.style.overflow = '';
+      return;
+    }
+
+    document.body.style.overflow = 'hidden';
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setSelectedImage(null);
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+      document.body.style.overflow = '';
+    };
+  }, [selectedImage]);
+
 return (
 <>
 <Header />
 <main className="min-h-screen bg-base">
 {/* Hero Section */}
-<section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
+<section className="relative h-[80vh] flex items-center justify-center overflow-hidden">
 <div className="absolute inset-0 z-0">
 <img
 src={sucursal.imagenes[0]}
 alt={`Sucursal ${sucursal.nombre}`}
 className="w-full h-full object-cover"
 />
-<div className="absolute inset-0 bg-dark/60" />
+{/*overlay*/}
+<div className='absolute inset-0 z-10 bg-black opacity-40'>
+</div>
 </div>
 <motion.div
 initial={{ opacity: 0, y: 30 }}
@@ -59,26 +85,55 @@ className="relative z-10 text-center px-4"
           Galería
         </motion.h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="columns-1 md:columns-2 lg:columns-3 gap-6">
           {sucursal.imagenes.map((src: string, index: number) => (
-            <motion.div
-              key={index}
+            <motion.button
+              key={`${src}-${index}`}
+              type="button"
+              onClick={() => setSelectedImage(src)}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="photo-frame"
+              transition={{ duration: 0.6, delay: index * 0.08 }}
+              className="photo-frame mb-6 block w-full cursor-pointer overflow-hidden break-inside-avoid"
             >
               <img
                 src={src}
                 alt={`${sucursal.nombre} - Imagen ${index + 1}`}
-                className="w-full h-64 object-cover rounded-md"
+                className="w-full h-auto rounded-md object-contain"
+                loading="lazy"
               />
-            </motion.div>
+            </motion.button>
           ))}
         </div>
       </div>
     </section>
+
+    {selectedImage && (
+      <div
+        className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 p-4"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Vista ampliada de la imagen"
+        onClick={() => setSelectedImage(null)}
+      >
+        <div className="relative max-h-[90vh] max-w-[90vw]" onClick={(event) => event.stopPropagation()}>
+          <button
+            type="button"
+            onClick={() => setSelectedImage(null)}
+            className="absolute right-3 top-3 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-black/70 text-xl text-white transition hover:bg-black/90"
+            aria-label="Cerrar imagen"
+          >
+            X
+          </button>
+          <img
+            src={selectedImage}
+            alt="Vista ampliada de la sucursal"
+            className="max-h-[90vh] max-w-[90vw] rounded-lg object-contain shadow-2xl"
+          />
+        </div>
+      </div>
+    )}
     {/* Mapa y Contacto */}
     <section className="py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
