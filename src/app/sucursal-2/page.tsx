@@ -173,7 +173,7 @@ className="relative z-10 text-center px-4"
 
             <a
               href={`tel:${sucursal.telefono}`}
-              className="inline-block bg-accent hover:bg-accent-hover text-(--text-on-dark) font-semibold px-8 py-4 rounded-md transition-colors duration-300 shadow-warm"
+              className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-(--text-on-white) font-semibold px-8 py-4 rounded-md transition-all duration-300"
             >
               Llamar ahora
             </a>

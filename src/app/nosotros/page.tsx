@@ -34,14 +34,16 @@ return (
 <Header />
 <main className="min-h-screen bg-base">
 {/* Hero Section */}
-<section className="relative h-[50vh] flex items-center justify-center overflow-hidden">
+<section className="relative h-[80vh] flex items-center justify-center overflow-hidden">
 <div className="absolute inset-0 z-0">
 <img
 src="/images/jarabacoa/restaurante-lleno-2.webp"
 alt="Interior del restaurante"
 className="w-full h-full object-cover"
 />
-<div className="absolute inset-0 bg-dark/70" />
+{/*overlay*/}
+<div className='absolute inset-0 z-10 bg-black opacity-40'>
+</div>
 </div>
 <motion.div
 initial={{ opacity: 0, y: 30 }}
@@ -67,8 +69,8 @@ Tradición, sabor y familia en el corazón del Cibao
           transition={{ duration: 0.6 }}
           className="prose prose-lg max-w-none"
         >
-          <h2 className="font-heading text-4xl font-semibold text-ink mb-6">
-            El alto rústico en carretera
+          <h2 className="font-heading text-4xl font-semibold text-(--accent) mb-6">
+            Mucho más que carne, Una experiencia a la parrilla
           </h2>
           
           <p className="text-ink-secondary text-lg leading-relaxed mb-6">
@@ -84,8 +86,8 @@ Tradición, sabor y familia en el corazón del Cibao
             Cada pieza de carne, cada acompañamiento, cada bebida refleja nuestra dedicación a la tradición y la calidad.
           </p>
 
-          <h3 className="font-heading text-3xl font-semibold text-ink mb-4 mt-12">
-            Dos sucursales, un mismo alma
+          <h3 className="font-heading text-3xl font-semibold text-(--accent) mb-4 mt-12">
+            Dos sucursales, un mismo sabor
           </h3>
 
           <p className="text-ink-secondary text-lg leading-relaxed mb-6">
@@ -115,7 +117,7 @@ Tradición, sabor y familia en el corazón del Cibao
             </p>
           </div>
 
-          <h3 className="font-heading text-3xl font-semibold text-ink mb-4 mt-12">
+          <h3 className="font-heading text-3xl font-semibold text-(--accent) mb-4 mt-12">
             Tradición que no se modifica
           </h3>
 
@@ -141,7 +143,7 @@ Tradición, sabor y familia en el corazón del Cibao
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="font-heading text-4xl font-semibold text-ink text-center mb-12">
+          className="font-heading text-4xl font-semibold text-(--accent) text-center mb-12">
       Nuestro ambiente
         </motion.h2>
 

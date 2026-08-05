@@ -20,44 +20,55 @@ export default function LocationCard({ sucursal }: LocationCardProps) {
       whileInView="visible"
       viewport={{ once: true, margin: "-50px" }}
       variants={motionVariants.fadeInUp}
-      className="bg-surface rounded-lg border border-wood/15 p-6 shadow-warm"
+      className="bg-(--white) rounded-lg border border-wood/15 p-6 shadow-warm"
     >
       <div className="flex items-start justify-between mb-4">
-        <h3 className="font-heading text-2xl font-semibold text-ink">
+        <h3 className="font-heading text-2xl font-semibold text-(--accent)">
           {sucursal.nombre}
         </h3>
-        <span className="bg-sage text-white text-xs font-semibold px-3 py-1 rounded-full">
-          {sucursal.id === 'jarabacoa' ? 'Vista panorámica' : 'Sobre autopista'}
+        <span className="bg-sage text-(--text-on-white) text-xs font-semibold px-3 py-1 rounded-full">
+          {sucursal.id === 'jarabacoa' ? 'Vista panorámica' : 'Extensión de la familia'}
         </span>
       </div>  
       
       <div className="space-y-3 mb-6">
         <div>
-          <p className="text-ink-secondary text-sm font-medium mb-1">Teléfono</p>
+          <p className="text-(--text-on-white) text-lg font-semibold mb-1">Teléfono</p>
           <a
             href={`tel:${sucursal.telefono}`}
-            className="text-accent hover:text-accent-hover font-semibold transition-colors"
+            className="text-(--text-on-white) hover:text-accent-hover  transition-colors"
           >
             {sucursal.telefono}
           </a>
         </div>
 
         <div>
-          <p className="text-ink-secondary text-sm font-medium mb-2">Características</p>
+          <p className="text-(--text-on-white) text-lg font-semibold mb-2">Características</p>
           <ul className="space-y-1">
             {sucursal.caracteristicas.map((caracteristica: string, index: number) => (
-              <li key={index} className="text-ink text-sm flex items-start">
-                <span className="text-wood mr-2 mt-1">•</span>
+              <li key={index} className="text-(--text-on-white) text-sm flex items-start">
+                <span className="text-wood mr-2 inline-flex items-center">•</span>
                 {caracteristica}
               </li>
             ))}
           </ul>
         </div>
       </div>
-
+      <div className="mb-6">
+      <iframe
+              src={sucursal.mapaUrl}
+              width="100%"
+              height="450"
+              style={{ border: 0, borderRadius: '12px' }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title={`Mapa de ${sucursal.nombre}`}
+            />
+      </div>
       <a
         href={`tel:${sucursal.telefono}`}
-        className="block w-full bg-accent hover:bg-accent-hover text-white font-semibold text-center py-3 rounded-md transition-colors duration-300"
+        className="block w-full text-center bg-transparent border-2 border-white text-white hover:bg-white hover:text-(--text-on-white) font-semibold px-8 py-4 rounded-md transition-all duration-300"
       >
         Llamar ahora
       </a>

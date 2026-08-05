@@ -13,11 +13,11 @@ id: "jarabacoa",
 nombre: "Jarabacoa",
 telefono: "+1 809-865-4811",
 caracteristicas: [
+"Nuestra Sucursal principal",
 "Vistas panorámicas a las montañas",
-"Ambiente fresco",
-"Decoración rústica campestre con flores"
+"Ambiente fresco"
 ],
-mapaUrl: "https://www.google.com/maps?q=Km+9+Carretera+Federico+Basilis+Jarabacoa+La+Vega+Republica+Dominicana&output=embed",
+mapaUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3767.907638034005!2d-70.58520092576173!3d19.19923604809405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8eb02db6d33be309%3A0x3b2af14068f47545!2sParador%20Coraz%C3%B3n%20de%20Jes%C3%BAs!5e0!3m2!1ses!2sdo!4v1785895093417!5m2!1ses!2sdo",
 imagenes: [
 "/images/jarabacoa/foto-exterior-restaurante.webp",
 "/images/jarabacoa/vista-montana-balcon-restaurant.webp",

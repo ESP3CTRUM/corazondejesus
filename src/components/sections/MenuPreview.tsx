@@ -20,7 +20,7 @@ className="text-center mb-12"
 <motion.h2
 variants={motionVariants.fadeInUp}
 className="font-heading text-4xl md:text-5xl font-semibold text-(--text-primary)">
-Nuestras Especialidades
+Especialidades
 </motion.h2>
 <motion.p
 variants={motionVariants.fadeInUp}
@@ -68,7 +68,7 @@ Preparadas a la leña con las recetas tradicionales de la casa
     >
       <Link
         href="/menu"
-        className="inline-block bg-accent hover:bg-accent-hover text-white font-semibold px-8 py-4 rounded-md transition-colors duration-300 shadow-warm"
+        className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-(--text-on-white) font-semibold px-8 py-4 rounded-md transition-all duration-300"
       >
         Ver menú completo
       </Link>
