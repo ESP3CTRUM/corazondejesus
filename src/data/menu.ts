@@ -14,7 +14,7 @@ export const menu: MenuCategoria[] = [
 nombre: "Especialidades de Carne (A la leña / Parrilla)",
 items: [
 {
-nombre: "costillas de cerdo",
+nombre: "COSTILLAS DE CERDO",
 descripcion: "Cómpralas por libra.",
 categoria: "Carnes",
 destacado: true
@@ -35,7 +35,7 @@ categoria: "A la leña"
 nombre: "Acompañamientos Tradicionales",
 items: [
 {
-nombre: "Yuca frita",
+nombre: "YUCA FRITA",
 descripcion: "Crujiente por fuera, suave por dentro.",
 categoria: "Acompañamiento",
 destacado: true
@@ -56,7 +56,7 @@ categoria: "Acompañamiento"
 nombre: "Bebidas",
 items: [
 {
-nombre: "Fresa frozen con alcohol",
+nombre: "FRESA FROZEN CON ALCHOL",
 descripcion: "Coctel preparado con fresas frescas.",
 categoria: "Cocteles",
 destacado: true
