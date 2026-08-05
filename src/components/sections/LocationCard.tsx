@@ -20,33 +20,33 @@ export default function LocationCard({ sucursal }: LocationCardProps) {
       whileInView="visible"
       viewport={{ once: true, margin: "-50px" }}
       variants={motionVariants.fadeInUp}
-      className="bg-(--white) rounded-lg border border-wood/15 p-6 shadow-warm"
+      className="rounded-lg border border-wood/15 p-6 shadow-warm"
     >
       <div className="flex items-start justify-between mb-4">
         <h3 className="font-heading text-2xl font-semibold text-(--accent)">
           {sucursal.nombre}
         </h3>
-        <span className="bg-sage text-(--text-on-white) text-xs font-semibold px-3 py-1 rounded-full">
+        <span className="bg-sage text-(--text-on-black) text-xs font-semibold px-3 py-1 rounded-full">
           {sucursal.id === 'jarabacoa' ? 'Vista panorámica' : 'Extensión de la familia'}
         </span>
       </div>  
       
       <div className="space-y-3 mb-6">
         <div>
-          <p className="text-(--text-on-white) text-lg font-semibold mb-1">Teléfono</p>
+          <p className="text-(--text-on-black) text-lg font-semibold mb-1">Teléfono</p>
           <a
             href={`tel:${sucursal.telefono}`}
-            className="text-(--text-on-white) hover:text-accent-hover  transition-colors"
+            className="text-(--text-on-black) hover:text-accent-hover  transition-colors"
           >
             {sucursal.telefono}
           </a>
         </div>
 
         <div>
-          <p className="text-(--text-on-white) text-lg font-semibold mb-2">Características</p>
+          <p className="text-(--text-on-black) text-lg font-semibold mb-2">Características</p>
           <ul className="space-y-1">
             {sucursal.caracteristicas.map((caracteristica: string, index: number) => (
-              <li key={index} className="text-(--text-on-white) text-sm flex items-start">
+              <li key={index} className="text-(--text-on-black) text-sm flex items-start">
                 <span className="text-wood mr-2 inline-flex items-center">•</span>
                 {caracteristica}
               </li>
