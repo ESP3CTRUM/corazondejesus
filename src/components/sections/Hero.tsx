@@ -10,7 +10,7 @@ return (
   {/* Background Image */}
   <div className="absolute inset-0 z-0">
     <img
-    src="/images/jarabacoa/vista-montana-balcon-restaurant.webp"
+    src="/images/Jarabacoa/vista-montana-balcon-restaurant.webp"
     alt="Vista del restaurante"
     className="w-full h-full object-cover"
     />

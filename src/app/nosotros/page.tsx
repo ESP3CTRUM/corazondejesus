@@ -37,7 +37,7 @@ return (
 <section className="relative h-[80vh] flex items-center justify-center overflow-hidden">
 <div className="absolute inset-0 z-0">
 <img
-src="/images/jarabacoa/restaurante-lleno-2.webp"
+src="/images/Jarabacoa/restaurante-lleno-2.webp"
 alt="Interior del restaurante"
 className="w-full h-full object-cover"
 />
@@ -149,12 +149,12 @@ Tradición, sabor y familia en el corazón del Cibao
 
         <div className="columns-1 md:columns-2 lg:columns-3 gap-6">
           {[
-            "/images/jarabacoa/vista-balcon-2.webp",
-            "/images/jarabacoa/meseros-distancia+wideshot-restaurante.webp",
-            "/images/jarabacoa/Restaurante-lleno.webp",
-            "/images/jarabacoa/mesera-espaldas-bandeja-mano.webp",
-            "/images/jarabacoa/foto-exterior-restaurante.webp",
-            "/images/jarabacoa/foto-aerea-restaurante+parqueo.webp"
+            "/images/Jarabacoa/vista-balcon-2.webp",
+            "/images/Jarabacoa/meseros-distancia+wideshot-restaurante.webp",
+            "/images/Jarabacoa/Restaurante-lleno.webp",
+            "/images/Jarabacoa/mesera-espaldas-bandeja-mano.webp",
+            "/images/Jarabacoa/foto-exterior-restaurante.webp",
+            "/images/Jarabacoa/foto-aerea-restaurante+parqueo.webp"
           ].map((src, index) => (
             <motion.button
               key={src}

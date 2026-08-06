@@ -17,7 +17,7 @@ variants={motionVariants.fadeInLeft}
 className="photo-frame"
 >
 <img
-src="/images/jarabacoa/Chef-en-parrillada.webp"
+src="/images/Jarabacoa/Chef-en-parrillada.webp"
 alt="Chef preparando carne a la leña"
 className="w-full h-auto rounded-md"
 />
