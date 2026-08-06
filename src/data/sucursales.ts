@@ -34,8 +34,8 @@ caracteristicas: [
 ],
 mapaUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2088.856439019339!2d-70.43135679245219!3d18.988723139152984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8eafd9a1b16de7df%3A0x414cca271aa9d04d!2sParador%20Coraz%C3%B3n%20De%20Jes%C3%BAs!5e0!3m2!1ses!2sdo!4v1785455039445!5m2!1ses!2sdo",
 imagenes: [
-"/images/Bonao/Foto-exterior+letrero.webp",
-"/images/bonao/foto-mesas-vacías.webp",
+"/images/Bonao/Foto-exterior-letrero.webp",
+"/images/bonao/foto-mesas-vacias.webp",
 "/images/Bonao/foto-de-plato-comida.webp",
 "/images/bonao/sirviendo-bandeja-cafe-greca-decorada-colores-blanco-rojo-acento.webp",
 "/images/Bonao/foto-exterior-fachada.webp",
